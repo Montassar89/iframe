@@ -12,9 +12,22 @@
 <body>
 <!-- partial:index.partial.html -->
 <div class="iframe-container">
-  <iframe width="560" height="315" src="https://customer.perkss.co.uk/camspice/menu" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+  <div class="overlay" id="over">
+    <div class="overlay__inner">
+        <div class="overlay__content"><span class="spinner"></span></div>
+    </div>
 </div>
+
+  <iframe  id="if" width="560" height="315" src="https://customer.perkss.co.uk/camspice/menu" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+</div>
+
 <!-- partial -->
-  
+<script>
+  document.getElementById('if').style.display = 'none';
+function myFunction() {
+  setTimeout(function(){ document.getElementById('if').style.display = 'block'; }, 5000);
+}
+// myFunction()
+</script>
 </body>
 </html>
